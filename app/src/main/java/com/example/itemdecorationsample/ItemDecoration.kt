@@ -51,7 +51,7 @@ class ItemDecoration(context: Context) : RecyclerView.ItemDecoration() {
                 header = vh
             } else if (vh is Adapter.ViewHolder.GroupFooter) {
                 // We found a footer. Let's draw a group starting from the header to the footer.
-                // If we have no footer, it was off-screen vertically, so let's draw all the way up to 0
+                // If we have no header, it was off-screen vertically, so let's draw all the way up to 0
                 // (correcting for the border radius).
                 val topPosition = header?.itemView?.y?.toInt()
                     ?: 0 - backgroundCornerRadius
